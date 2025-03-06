@@ -242,8 +242,7 @@ function updateScore(addToScore){
     }
     document.getElementById("score").innerHTML = "Score: " + score;
 }
-//-------------
-
+//--------------------
 
 
 //--debugging functions--
