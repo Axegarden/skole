@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../CSS/GeneralStyles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Til alle jer ludomaner</title>
+    </head>
+    <body>
+<!-- Title -->
+        <div class="Banner">
+            <div class="Title">Poker chip manager</div>
+        </div>
+
+<!-- player counter buttons and label -->
+    <div class="Center">
+        <button class="Box Subtitle" id="subtractPlayer"> - </button>
+
+        <div class="Box_count">
+            <div>Player count</div>
+            <label id="playerCountDisplay">2</label>
+        </div>  
+
+        <button class="Box Subtitle" id="addPlayer"> + </button>
+    </div>
+
+<!-- money counter buttons and label -->
+    <div class="Center">
+        <div>
+            <button class="Box Subtitle" id="subtractMoney100"> -100 </button>
+            <button class="Box Subtitle" id="subtractMoney10"> -10 </button>
+        </div>
+
+        <div class="Box_count">
+            <div>Start money</div>
+            <label id="startMoneyDisplay">0</label>
+        </div>
+        
+        <div>
+            <button class="Box Subtitle" id="addMoney100"> +100 </button>
+            <button class="Box Subtitle" id="addMoney10"> +10 </button>
+        </div>
+    </div>
+
+<!-- start button -->    
+    <div class="Center">
+        <button class="Box Subtitle" id="startGame"> Start game </button>
+        <!--a href="Table.html">   </a-->
+    </div>
+
+    <script src="../JS/main.js"></script>
+    </body>
+</html>

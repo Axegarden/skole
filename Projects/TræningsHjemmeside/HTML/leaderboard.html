@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../CSS/GeneralStyles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leaderboard</title>
+    </head>
+    <body>
+        <a href="../HTML/createUser.html">Create account</a>
+        <button id="cls">cls</button>
+
+        <div class="Center_div">
+            <input type="text" id="logOnUserName" placeholder="User name">
+            <input type="text" id="logOnPassword" placeholder="Password">  
+            <button class = "Center" id="submit">Submit score</button>
+        </div>
+        
+        <div class="Center_div Score_box">
+            <button class = "Center" id="removeScore">-</button>
+            <label id="score" >Score: 0</label>
+            <button class = "Center" id="addScore">+</button>
+        </div>
+
+        <div class="Center_div">
+            <table id="leaderboard">
+                <th class = "Leaderboard_box">Name</th>
+                <th class = "Leaderboard_box">Score</th>
+                <th class = "Leaderboard_box">Date</th>
+            </table>
+        </div>
+
+        <script src="../JS/main.js"></script>
+    </body>
+</html>

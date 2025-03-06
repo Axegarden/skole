@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(195, 254, 246);
+}
+.Title{
+    font-family: consolas;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    -webkit-text-stroke: 1px black;
+}
+.Subtitle{
+    font-family: consolas;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    -webkit-text-stroke: 1px black;
+}
+.Text{
+    font-family: consolas;
+    font-size: 15px;
+    text-align: center;
+}
+.Note{
+    font-size: 10px;
+    text-align: center;
+}
+.Box{
+    background-color: lightslategray;
+    border: 2px solid black;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.Text_box{
+    text-align: center;
+}
+#leaderboard{
+    border-collapse: collapse;
+}
+.Leaderboard_box{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    padding-top: 2px;
+    margin-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.Center_div{
+    max-width: fit-content;
+    margin-inline: auto;
+}
+.Center{
+    text-align: center;
+}
+.Score_box{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    padding-top: 2px;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: 30px; 
+    min-height: 20px;
+}
+button{
+    font-size: 15px;
+}
