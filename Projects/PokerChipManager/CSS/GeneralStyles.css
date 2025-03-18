@@ -65,6 +65,9 @@ body{
     align-items: center;
     text-align: center;
 }
+.rtl{
+    direction: rtl;
+}
 button{
     font-size: 15px;
 }
