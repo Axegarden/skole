@@ -140,9 +140,11 @@ if(document.URL.includes("Table.html")){
     if (storedPlayers) {
         players.push(...JSON.parse(storedPlayers));
     }
-    else {
-        console.log("No players found in localStorage.");
+    else{
+        alert("No players found in localStorage.");
     }
 
-    console.log(players);
+    const helloDiv = document.createElement("div");
+    helloDiv.textContent = "Hello";
+    document.body.appendChild(helloDiv);
 }
