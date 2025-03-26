@@ -1,8 +1,11 @@
+let isWriting = false;
 const submitButton = document.getElementById('submit');
 const outputLabel = document.getElementById('output');
 const inputLabel = document.getElementById('input');
 const musicPaths = [
-    '../music/fortniteBoogie.mp3'];
+    '../music/fortniteBoogie.mp3',
+    '../music/fortniteDefaultDance.mp3',
+    '../music/bara-bara-bere-bere.mp3',];
 const gifPaths = [
     '../gifs/BD1.gif',
     '../gifs/BD2.gif',
@@ -13,7 +16,16 @@ const gifPaths = [
     '../gifs/BD7.gif',
     '../gifs/BD8.gif'
 ];
-let isWriting = false;
+const responseOptions = [
+    '  Good question. Here let me break it down for you  ',
+    '  I understand why you would be confused. Let me break it down for you  ',
+    '  I can see why that would be confusing. Here let me break it down for you  ',
+    '  Here let me break it down for you  ',
+    '  I understand why you would be confused. Let me break it down for you  ',
+    '  That is a verry good question. I will now break it down for you  ',
+    '  I wanna boogie!!!  ',
+    '  Sorry. I cant answer that. But i can breakdance!!!  '
+];
 
 //listens for button press
 submitButton.addEventListener('click', () => main());
@@ -37,7 +49,7 @@ function main(){
 //breaks it down
 function breakItDown() {
     isWriting = true;
-    const text = '  Good question. Here let me break it down for you  ';
+    const text = responseOptions[Math.floor(Math.random() * responseOptions.length)];
 
     typeWriter(text, 80, true, false);
 }
@@ -79,8 +91,6 @@ function displaySoduko() {
     gifElement.style.zIndex = '9999';
     document.body.appendChild(gifElement);
 
-    playRandomMusic(3500); // Play music for the same duration as the GIF
-
     //Removes the gif after a few seconds
     setTimeout(() => {
         document.body.removeChild(gifElement);
@@ -105,7 +115,7 @@ function displayRandomGif(){
     gifElement.style.zIndex = '9999';
     document.body.appendChild(gifElement);
 
-    playRandomMusic(5000); // Play music for the same duration as the GIF
+    playRandomMusic(5000); // Ensure music always plays when a GIF is displayed
 
     //Removes the gif after a few seconds
     setTimeout(() => {
