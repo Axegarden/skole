@@ -5,7 +5,8 @@ const inputLabel = document.getElementById('input');
 const musicPaths = [
     '../music/fortniteBoogie.mp3',
     '../music/fortniteDefaultDance.mp3',
-    '../music/bara-bara-bere-bere.mp3',];
+    '../music/bara-bara-bere-bere.mp3',
+];
 const gifPaths = [
     '../gifs/BD1.gif',
     '../gifs/BD2.gif',
