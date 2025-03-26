@@ -1,5 +1,6 @@
 const submitButton = document.getElementById('submit');
-const outputLabel = document.getElementById('chatInput');
+const outputLabel = document.getElementById('output');
+const inputLabel = document.getElementById('input');
 const gifPaths = [
     '../gifs/BD1.gif',
     '../gifs/BD2.gif',
@@ -16,17 +17,17 @@ let isWriting = false;
 submitButton.addEventListener('click', () => main());
 
 function main(){
-    if(outputLabel.textContent === ''){//if the input is empty
-        alert('Please enter a question');
-        return;
-    }
-    if(!isWriting){
+    if(!isWriting && inputLabel.value != ''){ // Use .value to check the input field
         if(Math.floor(Math.random()*10)== 1){//randomly decides if the question was too difficult to answer
             tooDifficult();
         }
         else{
             breakItDown();
         }
+    }
+    else{
+        alert('Please enter a question');
+        return;
     }
 }
 
