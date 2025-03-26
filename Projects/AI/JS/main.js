@@ -1,6 +1,8 @@
 const submitButton = document.getElementById('submit');
 const outputLabel = document.getElementById('output');
 const inputLabel = document.getElementById('input');
+const musicPaths = [
+    '../music/fortniteBoogie.mp3'];
 const gifPaths = [
     '../gifs/BD1.gif',
     '../gifs/BD2.gif',
@@ -17,6 +19,7 @@ let isWriting = false;
 submitButton.addEventListener('click', () => main());
 
 function main(){
+    outputLabel.textContent = '';//clears the output label
     if(!isWriting && inputLabel.value != ''){ // Use .value to check the input field
         if(Math.floor(Math.random()*10)== 1){//randomly decides if the question was too difficult to answer
             tooDifficult();
@@ -76,6 +79,8 @@ function displaySoduko() {
     gifElement.style.zIndex = '9999';
     document.body.appendChild(gifElement);
 
+    playRandomMusic(3500); // Play music for the same duration as the GIF
+
     //Removes the gif after a few seconds
     setTimeout(() => {
         document.body.removeChild(gifElement);
@@ -100,8 +105,24 @@ function displayRandomGif(){
     gifElement.style.zIndex = '9999';
     document.body.appendChild(gifElement);
 
+    playRandomMusic(5000); // Play music for the same duration as the GIF
+
     //Removes the gif after a few seconds
     setTimeout(() => {
         document.body.removeChild(gifElement);
     }, 5000);
+}
+
+// Plays a random music track for a specified duration
+function playRandomMusic(duration) {
+    const randomIndex = Math.floor(Math.random() * musicPaths.length);
+    const randomMusic = musicPaths[randomIndex];
+    const audio = new Audio(randomMusic);
+    audio.play();
+
+    // Stops the music after the specified duration
+    setTimeout(() => {
+        audio.pause();
+        audio.currentTime = 0;
+    }, duration);
 }
