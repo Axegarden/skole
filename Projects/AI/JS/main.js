@@ -36,7 +36,6 @@ function breakItDown() {
     isWriting = true;
     const text = '  Good question. Here let me break it down for you  ';
 
-    outputLabel.textContent = ''; // Clear any existing text
     typeWriter(text, 80, true, false);
 }
 
@@ -45,7 +44,6 @@ function tooDifficult() {
     isWriting = true;
     const text = '  Sorry, it was too difficult to explain. I will now kill myself  ';
 
-    outputLabel.textContent = ''; // Clear any existing text
     typeWriter(text, 80, false, true);
 }
 
