@@ -68,6 +68,28 @@ body{
 .rtl{
     direction: rtl;
 }
+.playerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.playerDiv{
+    /**placement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+    flex: 1 1 calc(33.333% - 20px); /** 3 items per row with spacing */
+    box-sizing: border-box;
+    max-width: calc(33.333% - 20px);
+    /**visual changes */
+    color: white;
+    background-color: rgb(66, 66, 66);
+    border: 2px solid black; 
+
+}
 button{
     font-size: 15px;
 }

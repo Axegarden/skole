@@ -1,9 +1,7 @@
-//universal variables
-let players = [];
-
 //index
 if(document.URL.includes("Index.html")){
-    //global variables
+    //variables
+    let players = [];
     let maxPlayers = 6;
     let minPlayers = 2;
     let currentPlayers = minPlayers;
@@ -135,6 +133,9 @@ if(document.URL.includes("Index.html")){
 
 //Table
 if(document.URL.includes("Table.html")){
+    //variables
+    let players = [];
+
     // Retrievs the players from localStorage and adds them to the players array
     const storedPlayers = localStorage.getItem("players");
     if (storedPlayers) {
@@ -142,9 +143,22 @@ if(document.URL.includes("Table.html")){
     }
     else{
         alert("No players found in localStorage.");
+        window.location.href = "Index.html";
     }
 
-    const helloDiv = document.createElement("div");
-    helloDiv.textContent = "Hello";
-    document.body.appendChild(helloDiv);
+    createPlayerDivs();
+
+    function createPlayerDivs() {
+        const container = document.createElement("div");
+        container.className = "playerContainer";
+
+        for (let i = 0; i < players.length; i++) {
+            const playerDiv = document.createElement("div");
+            playerDiv.className = "playerDiv";
+            playerDiv.textContent = "player: " + players[i].name + ". wallet: " + players[i].wallet + "$";
+            container.appendChild(playerDiv);
+        }
+
+        document.body.appendChild(container);
+    }
 }
