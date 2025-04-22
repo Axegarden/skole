@@ -81,14 +81,18 @@ body{
     align-items: center;
     text-align: center;
     margin-bottom: 10px;
-    flex: 1 1 calc(33.333% - 20px); /** 3 items per row with spacing */
+    flex: 1 1 calc(33.333% - 20px); /**3 items per row with spacing */
     box-sizing: border-box;
     max-width: calc(33.333% - 20px);
+    padding: 10px;
     /**visual changes */
     color: white;
-    background-color: rgb(66, 66, 66);
-    border: 2px solid black; 
-
+    font-weight: bold;
+    font-family: consolas;
+    font-size: 40px;
+    background-color: rgb(92, 194, 74);
+    border: 2px solid black;
+    -webkit-text-stroke: 1px black;
 }
 button{
     font-size: 15px;
