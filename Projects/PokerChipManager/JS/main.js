@@ -17,6 +17,7 @@ if(document.URL.includes("Index.html")){
     const add_money100 = document.getElementById("addMoney100");
     const subtract_money100 = document.getElementById("subtractMoney100");
     const moneycount = document.getElementById("startMoneyDisplay");
+    const randomNameButton = document.getElementById("randomName");
 
     //html inputs
     add_player.addEventListener("click", addPlayer);
@@ -26,6 +27,7 @@ if(document.URL.includes("Index.html")){
     subtract_money10.addEventListener("click", subtractMoney10);
     add_money100.addEventListener("click", addMoney100);
     subtract_money100.addEventListener("click", subtractMoney100);
+    randomNameButton.addEventListener("click", randomName);
 
     class Player {
         constructor(name, initialBalance) {
@@ -49,7 +51,12 @@ if(document.URL.includes("Index.html")){
     function startGame() {
         players = [];
         for(let i = 0; i < currentPlayers; i++) {
-            players.push(new Player(randomName(), startMoney));
+            if(randomNameButton.checked){
+                players.push(new Player(randomName(), startMoney));
+            }
+            else{
+                players.push(new Player("Player " + (i + 1), startMoney));
+            }
         }
         console.log(players);
 
@@ -150,12 +157,15 @@ if(document.URL.includes("Table.html")){
 
     function createPlayerDivs() {
         const container = document.createElement("div");
+        const label = document.createElement("label");
         container.className = "playerContainer";
 
         for (let i = 0; i < players.length; i++) {
             const playerDiv = document.createElement("div");
             playerDiv.className = "playerDiv";
             playerDiv.textContent = "player: " + players[i].name + ". wallet: " + players[i].wallet + "$";
+            label.textContent = "label";
+            container.appendChild(label);
             container.appendChild(playerDiv);
         }
 
