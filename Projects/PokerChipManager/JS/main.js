@@ -157,18 +157,31 @@ if(document.URL.includes("Table.html")){
 
     function createPlayerDivs() {
         const container = document.createElement("div");
-        const label = document.createElement("label");
         container.className = "playerContainer";
 
         for (let i = 0; i < players.length; i++) {
             const playerDiv = document.createElement("div");
+            const buttonContainer = document.createElement("div");
+
+            //player info display
             playerDiv.className = "playerDiv";
-            playerDiv.textContent = "player: " + players[i].name + ". wallet: " + players[i].wallet + "$";
-            label.textContent = "label";
-            container.appendChild(label);
+            playerDiv.textContent = players[i].name + " Wallet: " + players[i].wallet + "$";
+
+
+            //buttons
+            buttonContainer.className = "buttonContainer";
+            const depositButton = document.createElement("button");
+            depositButton.textContent = "Deposit";
+            buttonContainer.appendChild(depositButton);
+
+            const withdrawButton = document.createElement("button");
+            withdrawButton.textContent = "Withdraw";
+            buttonContainer.appendChild(withdrawButton);
+
+            playerDiv.appendChild(buttonContainer);
             container.appendChild(playerDiv);
         }
-
+        //add the container to the body
         document.body.appendChild(container);
     }
 }

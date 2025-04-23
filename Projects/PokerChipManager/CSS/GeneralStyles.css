@@ -88,13 +88,18 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 10px;
 }
 .playerDiv{
     /**placement */
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
     margin-bottom: 10px;
     flex: 1 1 calc(33.333% - 20px); /**3 items per row with spacing */
     box-sizing: border-box;
